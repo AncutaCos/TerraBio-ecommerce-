@@ -1,0 +1,154 @@
+/* Sfondo scuro quando il modale è aperto */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(3px); /* Sfocatura per un effetto più elegante */
+}
+
+/* Contenuto del modale */
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow-y: auto; /* Scroll verticale */
+  max-height: 80vh; /* Evita che il modale sia troppo alto */
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Scrollbar personalizzata */
+.modal-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.product-button {
+  background: #2d572c;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.product-button:hover {
+  background: #1e3c1e;
+}
+
+/* Bottone di chiusura */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #444;
+  transition: transform 0.2s ease;
+}
+
+.close-btn:hover {
+  transform: scale(1.2);
+  color: #1e3c1e;
+}
+
+/* Immagine del prodotto */
+.modal-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin: 10px 0;
+  object-fit: cover;
+}
+
+/* Prezzo del prodotto */
+.modal-price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #1e3c1e;
+  margin-top: 10px;
+}
+
+/* Descrizione del prodotto */
+.modal-description {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+  padding: 0 10px;
+  text-align: left;
+}
+
+/* Pulsante "Aggiungi al carrello" */
+.add-to-cart-btn {
+  background: #1e3c1e;
+  color: white;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 15px;
+  transition: background 0.3s ease-in-out;
+}
+
+.add-to-cart-btn:hover {
+  background: #2a5a2a;
+}
+
+/* Bottone wishlist */
+.wishlist-btn {
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.wishlist-btn:hover {
+  transform: scale(1.2);
+}
+
+.wishlist-btn.active {
+  color: red;
+}
+
+/* Header del modale */
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+/* Effetto di apertura */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

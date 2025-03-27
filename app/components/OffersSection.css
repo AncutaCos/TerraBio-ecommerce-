@@ -1,0 +1,39 @@
+/* OffersSection.css */
+.offers-section {
+  padding: 20px;
+  background-color: #f7fafc;
+  text-align: center;
+}
+
+.offers-section h2 {
+  font-size: 25px;
+  color: #004225;
+  margin-bottom: 20px;
+}
+
+.offers-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.offers-section li {
+  background-color: rgb(4, 63, 22);
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 25px;
+  padding: 15px;
+  color: #004225;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.offers-section li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.offers-section p {
+  margin: 5px 0;
+  color: #cde5d0;
+}

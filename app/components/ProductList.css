@@ -1,0 +1,189 @@
+.product-section {
+    padding: 40px 3%;
+    background: linear-gradient(to bottom, #f4f7f4, #ffffff);
+  }
+  .out-of-stock-button {
+    padding: 10px 15px;
+    background-color: #f0f0f0;
+    color: #ad0606;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: not-allowed;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 10px;
+  }
+  
+  /* Contenitore centrale */
+  .container {
+    max-width: 1500px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  /* Modifiche nel CSS */
+.title-container {
+    max-width: 1500px;
+    margin: 0 auto 2rem;
+    padding: 0 20px;
+}
+
+.product-title {
+    font-size: 2rem;
+    font-weight: 400;
+    color: #1a4724;
+    margin: 0;
+    position: relative;
+    padding-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center; /* Allineamento centrale */
+    width: fit-content;
+    margin: 0 auto; /* Centratura orizzontale */
+}
+
+.product-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 140px;
+    height: 7px;
+    background: linear-gradient(90deg, #1a4724 0%, #4CAF50 100%);
+    border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+    .product-title {
+        font-size: 1.8rem;
+        padding-bottom: 10px;
+    }
+    
+    .title-container {
+        margin-bottom: 1.5rem;
+        padding: 0 15px;
+    }
+}
+  
+  /* Wrapper per nascondere l'overflow */
+  .slider-wrapper {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+  }
+  
+  /* Contenitore dello slider: utilizziamo inline-block e white-space per ottenere un effetto marquee */
+  .product-slider {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll 65s linear infinite;
+  }
+  
+  /* Animazione continua */
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  
+  /* Scheda prodotto: impostata come inline-block per il marquee */
+  .product-card {
+    display: inline-block;
+    vertical-align: top;
+    width: 280px;
+    margin-right: 20px;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+  }
+  
+  /* Immagine prodotto */
+  .product-image {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Fallback per immagine */
+  .no-image {
+    width: 100%;
+    height: 100%;
+    background: #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+  }
+  
+  /* Nome prodotto */
+  .product-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #333;
+  }
+  
+  /* Descrizione prodotto */
+  .product-description {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 10px 0;
+  }
+  
+  /* Footer della scheda */
+  .product-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+  }
+  
+  /* Prezzo */
+  .product-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #2d572c;
+  }
+  
+  /* Bottone */
+  .product-button {
+    background: #2d572c;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .product-button:hover {
+    background: #1e3c1e;
+  }
+  
+  /* Messaggio di caricamento */
+  .loading-message {
+    font-size: 1.2rem;
+    color: #777;
+    text-align: center;
+  }
+  

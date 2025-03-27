@@ -1,0 +1,18 @@
+/* styles/ShopHero.css */
+.shop-hero {
+    background: url("/images/shop-banner.jpg") no-repeat center/cover;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .hero-content {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+  }
+  

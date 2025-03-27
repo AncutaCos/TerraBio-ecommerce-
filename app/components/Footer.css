@@ -1,0 +1,15 @@
+.footer {
+  background: #2c6e49;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+.footer a {
+  color: white; /* Imposta il colore del testo dei link a bianco */
+  text-decoration: none; /* Rimuove la sottolineatura dai link */
+}
+
+.footer a:hover {
+  text-decoration: underline; /* Aggiunge una sottolineatura quando si passa sopra il link */
+}

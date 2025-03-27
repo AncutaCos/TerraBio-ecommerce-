@@ -1,0 +1,102 @@
+.hero {
+    background: url("/images/Prodotti.jpg") no-repeat center center/cover;
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    padding: 0 20px; /* 🔥 Aggiunto padding per evitare che il testo tocchi i bordi */
+  }
+  
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+  }
+  
+  .hero-content {
+    position: relative;
+    max-width: 700px;
+    padding: 20px;
+    z-index: 1;
+  }
+  
+  /* 🔥 Titolo più grande su schermi grandi, più piccolo su mobile */
+  .hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ffb703;
+    margin-bottom: 10px;
+  }
+  
+  /* 🔥 Ridimensioniamo il testo per dispositivi più piccoli */
+  .hero p {
+    font-size: 1.2rem;
+    max-width: 90%;
+    margin: 0 auto 20px;
+  }
+  
+  /* 🔥 Pulsante con dimensioni adattabili */
+  .btn-primary {
+    display: inline-block;
+    background: #ffb703;
+    padding: 12px 25px;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  
+  .btn-primary:hover {
+    background: #e09f3e;
+    transform: scale(1.1);
+  }
+  
+  /* ✅ **Responsive Design per Tablet e Smartphone** */
+  @media (max-width: 1024px) {
+    .hero {
+      height: 60vh; /* 🔥 Un po' più basso su tablet */
+    }
+  
+    .hero h1 {
+      font-size: 2.5rem;
+    }
+  
+    .hero p {
+      font-size: 1.1rem;
+    }
+  
+    .btn-primary {
+      font-size: 1rem;
+      padding: 10px 20px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .hero {
+      height: 50vh; /* 🔥 Riduciamo l'altezza su mobile */
+      padding: 0 15px;
+    }
+  
+    .hero h1 {
+      font-size: 2rem;
+    }
+  
+    .hero p {
+      font-size: 1rem;
+    }
+  
+    .btn-primary {
+      font-size: 0.9rem;
+      padding: 8px 18px;
+    }
+  }
+  

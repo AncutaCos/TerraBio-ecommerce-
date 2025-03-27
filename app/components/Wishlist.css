@@ -1,0 +1,18 @@
+/* styles/Wishlist.css */
+.wishlist {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .wishlist-items {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .wishlist-items li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  

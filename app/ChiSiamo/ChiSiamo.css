@@ -1,0 +1,188 @@
+.chi-siamo-container {
+  padding: 0;
+  max-width: 100vw;
+  margin: 120px auto;
+  background: linear-gradient(135deg, #054824, #0d6a35);
+  color: #f0f0f0;
+  font-family: 'Arial', sans-serif;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+.main-title {
+  font-size: 3.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px 0;
+  color: #a5d6a7;
+  position: relative;
+  overflow: hidden;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.main-title::after {
+  content: "";
+  display: block;
+  width: 60%;
+  height: 4px;
+  background-color: #a5d6a7;
+  margin: 10px auto;
+  border-radius: 5px;
+  animation: slideIn 1s forwards;
+}
+
+@keyframes slideIn {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 60%;
+  }
+}
+
+.grid-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.quadrante {
+  position: relative;
+  padding: 20px;
+  border-radius: 15px;
+  background: #ffffff;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 2px solid #277029;
+  color: #0c420a;
+  overflow: hidden;
+}
+
+.quadrante-bg1, .quadrante-bg2 {
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+}
+
+.quadrante-bg1::before, .quadrante-bg2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.quadrante h2, .quadrante p, .quadrante ul {
+  position: relative;
+  z-index: 2;
+  color: #ffffff;
+  font-size: 1.2rem;
+}
+
+.quadrante-bg1 {
+  background-image: url('/images/ProdottiFiori.jpg');
+  
+}
+
+.quadrante-bg2 {
+  background-image: url('/images/ProdottiFiori2.jpg');
+  
+}
+
+.quadrante:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.quadrante h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.article {
+  margin-bottom: 20px;
+}
+
+.article-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #004d40;
+  margin-top: 20px;
+}
+
+.article-content {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #555;
+}
+
+.quadrante p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin: 10px 0;
+}
+
+.quadrante:not(.quadrante-bg1):not(.quadrante-bg2) {
+  background: #56876b; /* Aggiungi un po' di background */
+  color: #0c420a; /* Colore del testo per i quadranti senza immagini */
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  margin: 10px 0;
+  font-size: 1.2rem;
+  color: #ffffff;
+  position: relative;
+  padding-left: 20px;
+  list-style: none;
+}
+
+ul li::before {
+  content: "•";
+  color: #ffffff;
+  position: absolute;
+  left: 0;
+  font-size: 1.5rem;
+  line-height: 1;
+  list-style: none;
+}
+
+ul li strong {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+p strong {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .main-title {
+    font-size: 2.5rem;
+  }
+
+  .quadrante h2 {
+    font-size: 1.8rem;
+  }
+
+  .quadrante p {
+    font-size: 1rem;
+  }
+}

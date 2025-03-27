@@ -1,0 +1,66 @@
+/* AdminOrders.css */
+.admin-page {
+  display: flex;
+}
+
+.admin-content {
+  margin-left: 240px;
+  padding: 20px;
+  width: 100%;
+}
+
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.orders-table th,
+.orders-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.orders-table th {
+  background: #1e3c1e;
+  color: white;
+  font-size: 1.1rem;
+}
+
+.orders-table td {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.orders-table select {
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+/* Media Queries per dispositivi mobili */
+@media (max-width: 768px) {
+  .admin-content {
+    margin-left: 0;
+    padding: 10px;
+    overflow-x: auto;
+  }
+
+  .orders-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .orders-table th,
+  .orders-table td {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  .orders-table select {
+    padding: 4px;
+    font-size: 0.8rem;
+  }
+}
