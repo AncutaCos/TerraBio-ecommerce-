@@ -79,15 +79,28 @@
       padding: 10px 20px;
     }
   }
-  
   @media (max-width: 768px) {
     .hero {
-      height: 50vh; /* 🔥 Riduciamo l'altezza su mobile */
-      padding: 0 15px;
+      height: 50vh;
+      padding: 80px 15px 0; /* 👈 spazio sopra per evitare overlap con navbar */
+      align-items: flex-start; /* 👈 sposta il contenuto in alto */
     }
   
     .hero h1 {
       font-size: 2rem;
+      margin-bottom: 10px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .hero {
+      height: 50vh;
+      padding-top: 100px; /* 👈 spazio per la navbar */
+      align-items: flex-start; /* 👈 sposta contenuto in alto */
+    }
+  
+    .hero-content {
+      margin-top: 0;
     }
   
     .hero p {
